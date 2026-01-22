@@ -1,0 +1,163 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Warna Tema */
+:root {
+    --primary: #0066ff;
+    --primary-dark: #0047b3;
+    --bg: #f5f7fa;
+    --text: #333;
+    --white: #fff;
+    --sidebar-bg: #1f2937;
+    --sidebar-text: #e5e7eb;
+}
+
+/* Layout Utama */
+body {
+    display: flex;
+    background: var(--bg);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2 {
+    color: var(--white);
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 15px;
+    margin: 5px 0;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Area Konten */
+.main-content {
+    margin-left: 230px;
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background: var(--white);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+    font-size: 22px;
+    color: var(--text);
+}
+
+.header .logout-btn {
+    padding: 8px 14px;
+    background: red;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.header .logout-btn:hover {
+    opacity: .8;
+}
+
+/* Konten Dalam */
+.content {
+    padding: 25px;
+}
+
+/* Card Dashboard */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+/* Tabel Desain */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--white);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.table tr:hover {
+    background: #eef3ff;
+}
+
+/* Button */
+.btn {
+    padding: 8px 14px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+}
